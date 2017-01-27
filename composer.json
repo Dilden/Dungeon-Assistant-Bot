@@ -1,0 +1,14 @@
+{
+    "name": "clownie/dungeonassistantbot",
+    "description": "This bot is for managing D&D or GURPS in telegram groups",
+    "type": "project",
+    "require": {
+        "danyspin97/php-bot-framework": "^1.1"
+    },
+    "authors": [
+        {
+            "name": "Dylan Hildenbrand",
+            "email": "dylan.hildenbrand@gmail.com"
+        }
+    ]
+}

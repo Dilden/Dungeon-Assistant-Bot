@@ -1,0 +1,73 @@
+{
+    "_readme": [
+        "This file locks the dependencies of your project to a known state",
+        "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
+        "This file is @generated automatically"
+    ],
+    "content-hash": "5a0b3c0c74eb1c1f712015b338484d77",
+    "packages": [
+        {
+            "name": "danyspin97/php-bot-framework",
+            "version": "v1.1.2",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/DanySpin97/PhpBotFramework.git",
+                "reference": "fb98c79fd4e0334418ccf4a8b5ec14a89088840c"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/DanySpin97/PhpBotFramework/zipball/fb98c79fd4e0334418ccf4a8b5ec14a89088840c",
+                "reference": "fb98c79fd4e0334418ccf4a8b5ec14a89088840c",
+                "shasum": ""
+            },
+            "require": {
+                "ext-curl": "*",
+                "php": ">=7.0"
+            },
+            "require-dev": {
+                "phpunit/phpunit": "5.5.*"
+            },
+            "suggest": {
+                "ext-mysql": "*",
+                "ext-pgsql": "*",
+                "ext-redis": "*"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "DanySpin97\\PhpBotFramework\\": [
+                        "src/"
+                    ]
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "LGPL-3.0+"
+            ],
+            "authors": [
+                {
+                    "name": "Dany Spin",
+                    "homepage": "https://github.com/danyspin97",
+                    "role": "Developer"
+                }
+            ],
+            "description": "PhpBotFramework is a framework for Telegram Bots' APIs.",
+            "homepage": "https://danyspin97.github.io/PhpBotFramework",
+            "keywords": [
+                "bot",
+                "framework",
+                "telegram",
+                "telegram-bot"
+            ],
+            "time": "2016-12-07T20:10:24+00:00"
+        }
+    ],
+    "packages-dev": [],
+    "aliases": [],
+    "minimum-stability": "stable",
+    "stability-flags": [],
+    "prefer-stable": false,
+    "prefer-lowest": false,
+    "platform": [],
+    "platform-dev": []
+}
