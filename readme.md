@@ -10,16 +10,16 @@ Create a file called _BotAuth.php_
 
 BotAuth.php should look like:
 ```
-	<?php
-		namespace App;
+<?php
+	namespace App;
 
-		class BotAuth {
-			const auth_token = "INSERT_BOT_TOKEN_HERE";
+	class BotAuth {
+		const auth_token = "INSERT_BOT_TOKEN_HERE";
 
-			public function getAuth() {
-				return self::auth_token;
-			}
+		public function getAuth() {
+			return self::auth_token;
 		}
+	}
 
-	?>
+?>
 ```
