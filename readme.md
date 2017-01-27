@@ -3,13 +3,13 @@ This bot is designed to assist users in playing D&D or GURPS role playing games 
 
 #Installation
 1. Clone this repository into your project folder [git clone](git@bitbucket.org:lunchboxgang/dungeonassistantbot.git)
-2. run & composer install & to download dependencies
+2. run `composer install` & to download dependencies
 
 #Bot Authorization
-1. Create a file called *BotAuth.php*
+1. Create a file called _BotAuth.php_
 
 BotAuth.php should look like this:
-&
+`
 <?php
 namespace App;
 
@@ -22,4 +22,4 @@ class BotAuth {
 }
 
 ?>
-&
+`
