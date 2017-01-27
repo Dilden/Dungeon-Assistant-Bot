@@ -11,7 +11,7 @@ Create a file called _BotAuth.php_
 BotAuth.php should look like:
 `
 	<?php
-	namespace App;
+		namespace App;
 
 		class BotAuth {
 			const auth_token = "INSERT_BOT_TOKEN_HERE";
