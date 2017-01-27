@@ -9,7 +9,7 @@ This bot is designed to assist users in playing D&D or GURPS role playing games 
 Create a file called _BotAuth.php_
 
 BotAuth.php should look like:
-`
+```
 	<?php
 		namespace App;
 
@@ -22,4 +22,4 @@ BotAuth.php should look like:
 		}
 
 	?>
-`
+```
