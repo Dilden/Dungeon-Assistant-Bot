@@ -8,7 +8,7 @@ This bot is designed to assist users in playing D&D or GURPS role playing games 
 #Bot Authorization
 Create a file called _BotAuth.php_
 
-BotAuth.php should look like:
+BotAuth.php could be structured like this:
 ```
 <?php
 	namespace App;
