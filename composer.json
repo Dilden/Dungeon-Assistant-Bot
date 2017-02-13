@@ -3,12 +3,18 @@
     "description": "This bot is for managing D&D or GURPS in telegram groups",
     "type": "project",
     "require": {
-        "danyspin97/php-bot-framework": "^1.1"
+        "irazasyed/telegram-bot-sdk": "^2.0"
     },
     "authors": [
         {
             "name": "Dylan Hildenbrand",
             "email": "dylan.hildenbrand@gmail.com"
         }
-    ]
+    ],
+    "autoload": {
+        "psr-4": {
+          "App\\":"classes/",
+          "Commands\\":"commands/"
+        }
+      }
 }
