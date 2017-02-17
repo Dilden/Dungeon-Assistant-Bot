@@ -1,11 +1,10 @@
 <?php
-namespace web;
 
 require_once '../vendor/autoload.php';
 
 use Telegram\Bot\Api;
-use App\BotAuth;
-use App\commands\StartCommand;
+use derp\BotAuth;
+use derp\commands\StartCommand;
 
 $auth = new BotAuth();
 $telegram = new Api($auth->getAuthToken());

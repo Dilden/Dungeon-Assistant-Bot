@@ -13,8 +13,7 @@
     ],
     "autoload": {
         "psr-4": {
-          "App\\":"classes/",
-          "App\\commands\\":"classes/commands/"
+          "derp\\":"classes/"
         }
     }
 }

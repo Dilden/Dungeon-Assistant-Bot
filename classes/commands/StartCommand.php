@@ -1,6 +1,6 @@
 <?php
 
-namespace App\commands;
+namespace derp\commands;
 
 use Telegram\Bot\Actions;
 use Telegram\Bot\Commands\Command;
