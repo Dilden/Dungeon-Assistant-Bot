@@ -10,10 +10,5 @@
             "name": "Dylan Hildenbrand",
             "email": "dylan.hildenbrand@gmail.com"
         }
-    ],
-    "autoload": {
-        "psr-4": {
-          "App\\":"classes/"
-        }
-      }
+    ]
 }
