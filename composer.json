@@ -12,10 +12,8 @@
         }
     ],
     "autoload": {
-        "classmap": [
-          "classes/BotAuth.php",
-          "classes/DungeonBot.php",
-          "classes/commands/StartCommand.php"
-        ]
+        "psr-4": {
+          "Classes\\":"classes/"
+        }
     }
 }
