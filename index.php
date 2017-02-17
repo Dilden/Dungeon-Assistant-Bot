@@ -2,8 +2,6 @@
 
 
 require_once './vendor/autoload.php';
-// require_once './classes/BotAuth.php';
-// require_once './classes/DungeonBot.php';
 
 use Telegram\Bot\Api;
 use App\BotAuth;
