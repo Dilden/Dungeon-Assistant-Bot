@@ -12,9 +12,8 @@
         }
     ],
     "autoload": {
-        "classmap": [
-          "classes/",
-          "classes/commands/"
-        ]
+        "psr-4": {
+          "App\\":"classes/"
+        }
       }
 }
