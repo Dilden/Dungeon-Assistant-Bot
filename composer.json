@@ -12,8 +12,10 @@
         }
     ],
     "autoload": {
-        "psr-4": {
-          "derp\\":"bot-src/classes/"
-        }
+        "classmap": [
+          "classes/BotAuth.php",
+          "classes/DungeonBot.php",
+          "classes/commands/StartCommand.php"
+        ]
     }
 }
