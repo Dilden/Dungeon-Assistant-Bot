@@ -13,7 +13,11 @@ $telegram->addCommand(StartCommand::class);
 
 $updates = $telegram->getWebHookUpdates();
 
-echo "test";
+$vendorDir = dirname(dirname(__FILE__));
+$baseDir = dirname($vendorDir);
+
+echo $vendorDir . "<br>";
+echo $baseDir . "<br>";
 
 // $response = $telegram->getMe();
 
