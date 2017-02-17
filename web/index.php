@@ -8,10 +8,10 @@ use Telegram\Bot\Api;
 // use derp\BotAuth;
 // use derp\commands\StartCommand;
 
-$auth = new BotAuth();
+$auth = new derp\BotAuth();
 $telegram = new Api($auth->getAuthToken());
 
-$telegram->addCommand(StartCommand::class);
+$telegram->addCommand(derp\commands\StartCommand::class);
 
 $updates = $telegram->getWebHookUpdates();
 
