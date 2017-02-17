@@ -1,20 +1,20 @@
 <?php
 
 
-// require_once './vendor/autoload.php';
+require_once './vendor/autoload.php';
 
-// use Telegram\Bot\Api;
-// use App\BotAuth;
-// use App\commands\StartCommand;
-
-
-// $auth = new BotAuth();
-// $telegram = new Api($auth->getAuthToken());
+use Telegram\Bot\Api;
+use App\BotAuth;
+use App\commands\StartCommand;
 
 
-// $telegram->addCommand(StartCommand::class);
+$auth = new BotAuth();
+$telegram = new Api($auth->getAuthToken());
 
-// $updates = $telegram->getWebHookUpdates();
+
+$telegram->addCommand(StartCommand::class);
+
+$updates = $telegram->getWebHookUpdates();
 
 echo "test";
 
