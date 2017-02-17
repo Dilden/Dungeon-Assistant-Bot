@@ -1,16 +1,14 @@
 <?php
+namespace web;
 
-$loader = require_once '../vendor/autoload.php';
-$loader->addPsr4('App\\', '../classes/');
+require_once '../vendor/autoload.php';
 
 use Telegram\Bot\Api;
 use App\BotAuth;
 use App\commands\StartCommand;
 
-
 $auth = new BotAuth();
 $telegram = new Api($auth->getAuthToken());
-
 
 $telegram->addCommand(StartCommand::class);
 
