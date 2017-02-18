@@ -24,9 +24,6 @@ class DiceCommand extends Command
     {
         $this->replyWithChatAction(['action' => Actions::TYPING])
 
-        $update = $this->getUpdate();
-        $command = $update['message']['text'];
-
         $commandParameters = explode(" ", $arguments);
 
         $dice_count = 1;
