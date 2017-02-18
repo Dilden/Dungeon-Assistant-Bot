@@ -15,7 +15,7 @@ class DiceCommand extends Command
     /**
      * @var string Command Description
      */
-    protected $description = "Let's roll some numbers! Usage: /dice <X # of dice to roll> <Y # of sides per dice - default is 6>";
+    protected $description = "Let's roll some numbers! Usage: /dice <X # of dice to roll - default is 1> <Y # of sides per dice - default is 6>";
 
     /**
      * @inheritdoc
@@ -41,12 +41,12 @@ class DiceCommand extends Command
         }
 
 
-        if(is_int($dice_sides) && is_int($dice_count) && (count($commandParameters) < 2)) {
+        if(is_int($dice_sides) && is_int($dice_count) && (count($commandParameters) < 3)) {
             for ($i=0; $i < $dice_count; $i++) { 
                 $dice_values .= rand(1, $dice_sides) . ' '. PHP_EOL;
             }
 
-            $this->replyWithMessage(['text' => 'You roled: '. PHP_EOL . $dice_values]);
+            $this->replyWithMessage(['text' => 'You rolled: '. PHP_EOL . $dice_values]);
 
             return;
         }
