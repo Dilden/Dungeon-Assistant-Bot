@@ -59,7 +59,7 @@ class DiceCommand extends Command
                 $dice_values .= rand(1, $dice_sides) . PHP_EOL;
             }
 
-            $this->replyWithMessage(['text' => 'You roled: '. PHP_EOL . $dice_values]);
+            $this->replyWithMessage(['text' => 'You roled: '. PHP_EOL . PHP_EOL . $dice_values]);
 
             return;
         }
