@@ -40,12 +40,12 @@ class DiceCommand extends Command
                 break;
 
             case 1:
-                $dice_count = $commandParameters[0];
+                $dice_count = (int) $commandParameters[0];
                 break;
 
             case 2:
-                $dice_count = $commandParameters[0];
-                $dice_sides = $commandParameters[1];
+                $dice_count = (int) $commandParameters[0];
+                $dice_sides = (int) $commandParameters[1];
                 break;
             
             default:
