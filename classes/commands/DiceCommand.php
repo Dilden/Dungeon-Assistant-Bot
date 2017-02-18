@@ -56,10 +56,10 @@ class DiceCommand extends Command
 
         if(is_int($dice_sides) && is_int($dice_count)) {
             for ($i=0; $i < $dice_count; $i++) { 
-                $dice_values .= rand(1, $dice_sides) . ' \n';
+                $dice_values .= rand(1, $dice_sides) . PHP_EOL;
             }
 
-            $this->replyWithMessage(['text' => 'You roled: \n\n '. $dice_values]);
+            $this->replyWithMessage(['text' => 'You roled: '. PHP_EOL . $dice_values]);
 
             return;
         }
