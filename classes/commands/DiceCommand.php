@@ -44,17 +44,21 @@ class DiceCommand extends Command
 
 
         if(is_numeric($dice_sides) && is_numeric($dice_count) && (count($commandParameters) < 3)) {
-            for ($i=0; $i < intval($dice_count); $i++) { 
-                $dice_values .= rand(1, intval($dice_sides)) . ' '. PHP_EOL;
+            if((intval($dice_count) < 50) && (intval($dice_sides) < 50)) {
+                for ($i=0; $i < intval($dice_count); $i++) {
+                    $dice_values .= rand(1, intval($dice_sides)) . ' '. PHP_EOL;
+                }
+
+                $this->replyWithMessage(['text' => 'You rolled: '. PHP_EOL . $dice_values]);
+                return;
             }
-
-            $this->replyWithMessage(['text' => 'You rolled: '. PHP_EOL . $dice_values]);
-
-            return;
+            else {
+                $this->replyWithPhoto(['photo' => '../../img/no.gif', 'caption' => 'Stop that. I set a limit of 50 to both parameters.']);
+                return;
+            }
         }
         else {
             $this->replyWithMessage(['text' => 'I don\'t understand. ' .PHP_EOL]);
-
             return;
         }
 
