@@ -10,7 +10,8 @@ use derp\commands\StartCommand;
 $auth = new BotAuth();
 $telegram = new Api($auth->getAuthToken());
 
-$telegram->addCommand([HelpCommand::class, StartCommand::class]);
+$telegram->addCommand(HelpCommand::class);
+$telegram->addCommand(StartCommand::class);
 
 $update = $telegram->commandsHandler(true);
 
