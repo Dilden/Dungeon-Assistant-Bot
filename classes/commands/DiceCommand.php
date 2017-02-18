@@ -29,32 +29,35 @@ class DiceCommand extends Command
         $dice_values = NULL;
 
         $commandParameters = explode(" ", $arguments);
-        switch (count($commandParameters)) {
-            case 1:
-                $dice_count = (int) $commandParameters[0];
-                break;
 
-            case 2:
-                $dice_count = (int) $commandParameters[0];
-                $dice_sides = (int) $commandParameters[1];
-                break;
-        }
+        $this->replyWithMessage(['text' => count($commandParameters)]);
+        return;
+        // switch (count($commandParameters)) {
+        //     case 1:
+        //         $dice_count = $commandParameters[0];
+        //         break;
+
+        //     case 2:
+        //         $dice_count = $commandParameters[0];
+        //         $dice_sides = $commandParameters[1];
+        //         break;
+        // }
 
 
-        if(is_int($dice_sides) && is_int($dice_count) && (count($commandParameters) < 3)) {
-            for ($i=0; $i < $dice_count; $i++) { 
-                $dice_values .= rand(1, $dice_sides) . ' '. PHP_EOL;
-            }
+        // if(is_int($dice_sides) && is_int($dice_count) && (count($commandParameters) < 3)) {
+        //     for ($i=0; $i < $dice_count; $i++) { 
+        //         $dice_values .= rand(1, $dice_sides) . ' '. PHP_EOL;
+        //     }
 
-            $this->replyWithMessage(['text' => 'You rolled: '. PHP_EOL . $dice_values]);
+        //     $this->replyWithMessage(['text' => 'You rolled: '. PHP_EOL . $dice_values]);
 
-            return;
-        }
-        else {
-            $this->replyWithMessage(['text' => 'I don\'t understand. ' .PHP_EOL]);
+        //     return;
+        // }
+        // else {
+        //     $this->replyWithMessage(['text' => 'I don\'t understand. ' .PHP_EOL]);
 
-            return;
-        }
+        //     return;
+        // }
 
     }
 }
