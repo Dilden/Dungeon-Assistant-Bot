@@ -1,22 +1,20 @@
 <?php
 
 require_once '../vendor/autoload.php';
-require_once '../classes/BotAuth.php';
-require_once '../classes/commands/StartCommand.php';
 
 use Telegram\Bot\Api;
-// use derp\BotAuth;
-// use derp\commands\StartCommand;
+use derp\BotAuth;
+use derp\commands\StartCommand;
 
-$auth = new derp\BotAuth();
+$auth = new BotAuth();
 $telegram = new Api($auth->getAuthToken());
 
-$telegram->addCommand(derp\commands\StartCommand::class);
+$telegram->addCommand(StartCommand::class);
 
 $updates = $telegram->getWebHookUpdates();
 
 
-echo "test";
+// echo "test";
 
 // $response = $telegram->getMe();
 
