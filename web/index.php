@@ -14,7 +14,7 @@ $telegram->addCommand([HelpCommand::class, StartCommand::class]);
 
 $update = $telegram->commandsHandler(true);
 
-$updates = $telegram->getWebHookUpdates();
+$updates = $telegram->getUpdates();
 
 
 // echo "test";
