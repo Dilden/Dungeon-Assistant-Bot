@@ -53,7 +53,7 @@ class DiceCommand extends Command
                 return;
             }
             else {
-                $this->replyWithPhoto(['photo' => '../../img/no.gif', 'caption' => 'Stop that. I set a limit of 50 to both parameters.']);
+                $this->replyWithMessage(['text' => 'Stop that. I set a limit of 50 to both parameters.']);
                 return;
             }
         }
