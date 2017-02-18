@@ -32,13 +32,13 @@ class DiceCommand extends Command
         switch (count($commandParameters)) {
             case 1:
                 if(!empty($commandParameters[0])) {
-                    $dice_count = $commandParameters[0];
+                    $dice_count = intval($commandParameters[0]);
                 }
                 break;
 
             case 2:
-                $dice_count = $commandParameters[0];
-                $dice_sides = $commandParameters[1];
+                $dice_count = intval($commandParameters[0]);
+                $dice_sides = intval($commandParameters[1]);
                 break;
         }
 
