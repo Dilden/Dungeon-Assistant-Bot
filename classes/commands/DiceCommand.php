@@ -41,7 +41,7 @@ class DiceCommand extends Command
         }
 
 
-        if(is_int($dice_sides) && is_int($dice_count)) {
+        if(is_int($dice_sides) && is_int($dice_count) && (count($commandParameters) < 2)) {
             for ($i=0; $i < $dice_count; $i++) { 
                 $dice_values .= rand(1, $dice_sides) . ' '. PHP_EOL;
             }
