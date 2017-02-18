@@ -22,7 +22,7 @@ class DiceCommand extends Command
      */
     public function handle($arguments)
     {
-        // $this->replyWithMessage(['text' => 'Hello! Welcome to our bot, Here are our available commands:']);
+        $this->replyWithChatAction(['action' => Actions::TYPING])
 
         $update = $this->getUpdate();
         $command = $update['message']['text'];
@@ -35,10 +35,6 @@ class DiceCommand extends Command
         $dice_values = NULL;
 
         switch (count($commandParameters)) {
-            case 0:
-                # code...
-                break;
-
             case 1:
                 $dice_count = (int) $commandParameters[0];
                 break;
@@ -64,7 +60,9 @@ class DiceCommand extends Command
             return;
         }
         else {
+            $this->replyWithMessage(['text' => 'I don\'t understand. ' .PHP_EOL]);
 
+            return;
         }
 
     }
