@@ -32,20 +32,20 @@ class DiceCommand extends Command
         switch (count($commandParameters)) {
             case 1:
                 if(!empty($commandParameters[0])) {
-                    $dice_count = intval($commandParameters[0]);
+                    $dice_count = $commandParameters[0];
                 }
                 break;
 
             case 2:
-                $dice_count = intval($commandParameters[0]);
-                $dice_sides = intval($commandParameters[1]);
+                $dice_count = $commandParameters[0];
+                $dice_sides = $commandParameters[1];
                 break;
         }
 
 
-        if(is_int($dice_sides) && is_int($dice_count) && (count($commandParameters) < 3)) {
-            for ($i=0; $i < $dice_count; $i++) { 
-                $dice_values .= rand(1, $dice_sides) . ' '. PHP_EOL;
+        if(is_numeric($dice_sides) && is_numeric($dice_count) && (count($commandParameters) < 3)) {
+            for ($i=0; $i < intval($dice_count); $i++) { 
+                $dice_values .= rand(1, intval($dice_sides)) . ' '. PHP_EOL;
             }
 
             $this->replyWithMessage(['text' => 'You rolled: '. PHP_EOL . $dice_values]);
