@@ -15,7 +15,7 @@ class StartCommand extends Command
     /**
      * @var string Command Description
      */
-    protected $description = "Let's get this party started!! Wubba lubba dub dub!";
+    protected $description = "Fire me up.";
 
     /**
      * @inheritdoc
