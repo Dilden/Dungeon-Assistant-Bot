@@ -22,7 +22,7 @@ class DiceCommand extends Command
      */
     public function handle($arguments)
     {
-        $this->replyWithChatAction(['action' => Actions::TYPING])
+        $this->replyWithChatAction(['action' => Actions::TYPING]);
 
         $commandParameters = explode(" ", $arguments);
 
