@@ -22,6 +22,6 @@ class StartCommand extends Command
      */
     public function handle($arguments)
     {
-        $this->replyWithMessage(['text' => 'Hello! Dungeon Assistant Bot is designed to assist you in playing role playing games like GRUPS or D&D within a Telegram group. The current supported commands are /start, /help, and /dice. Use /help for more information.']);
+        $this->replyWithMessage(['text' => 'Hello! Dungeon Assistant Bot is designed to assist you in playing role playing games like GURPS or D&D within a Telegram group. The current supported commands are /start, /help, and /dice. Use /help for more information.']);
     }
 }

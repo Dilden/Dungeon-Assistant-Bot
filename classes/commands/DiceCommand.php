@@ -15,7 +15,7 @@ class DiceCommand extends Command
     /**
      * @var string Command Description
      */
-    protected $description = "Let's roll some numbers! \n\n This command utilizes the following format: `/dice <X # of dice to roll> <Y # of sides per dice - default is 6>";
+    protected $description = "Let's roll some numbers! \n\n This command utilizes the following format: `/dice <X # of dice to roll> <Y # of sides per dice - default is 6>`";
 
     /**
      * @inheritdoc
