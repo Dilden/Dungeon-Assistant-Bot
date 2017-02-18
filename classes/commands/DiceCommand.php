@@ -24,13 +24,11 @@ class DiceCommand extends Command
     {
         $this->replyWithChatAction(['action' => Actions::TYPING]);
 
-        $commandParameters = explode(" ", $arguments);
-
         $dice_count = 1;
         $dice_sides = 6;
-
         $dice_values = NULL;
 
+        $commandParameters = explode(" ", $arguments);
         switch (count($commandParameters)) {
             case 1:
                 $dice_count = (int) $commandParameters[0];
@@ -40,16 +38,12 @@ class DiceCommand extends Command
                 $dice_count = (int) $commandParameters[0];
                 $dice_sides = (int) $commandParameters[1];
                 break;
-            
-            default:
-                # code...
-                break;
         }
 
 
         if(is_int($dice_sides) && is_int($dice_count)) {
             for ($i=0; $i < $dice_count; $i++) { 
-                $dice_values .= rand(1, $dice_sides) . ' \n';
+                $dice_values .= rand(1, $dice_sides) . ' '. PHP_EOL;
             }
 
             $this->replyWithMessage(['text' => 'You roled: '. PHP_EOL . $dice_values]);
