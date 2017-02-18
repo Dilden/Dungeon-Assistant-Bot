@@ -14,8 +14,15 @@ $telegram->addCommand([HelpCommand::class, StartCommand::class]);
 
 $update = $telegram->commandsHandler(true);
 
-$updates = $telegram->getUpdates();
+// echo "<pre>";
+// var_dump($update);
+// echo "</pre>";
 
+// $updates = $telegram->getUpdates();
+
+// echo "<pre>";
+// var_dump($updates);
+// echo "</pre>";
 
 // echo "test";
 
