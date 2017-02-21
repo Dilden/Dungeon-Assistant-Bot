@@ -2,7 +2,7 @@
 namespace derp;
 
 class BotAuth {
-	const auth_token = "272639783:AAGBvtV8s2YW-PQgNGrY2AlSabWGVxweHoM";
+	const auth_token = "XXXXXXXXXXXXXXXXXXXXXX";
 
 	public function getAuthToken() {
 		return self::auth_token;
