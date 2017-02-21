@@ -16,15 +16,23 @@ Create a file called _BotAuth.php_
 BotAuth.php could be structured like this:
 ```
 <?php
-	namespace App;
+namespace derp;
 
-	class BotAuth {
-		const auth_token = "INSERT_BOT_TOKEN_HERE";
+class BotAuth {
+	const auth_token = "TELEGRAM_BOT_AUTH_TOKEN_HERE";
 
-		public function getAuth() {
-			return self::auth_token;
-		}
+	public function getAuthToken() {
+		return self::auth_token;
 	}
+
+	public function setWebhook() {
+		$curl = curl_init("https://api.telegram.org:443/bot".self::auth_token."/setwebhook?url=https://YOUR_URL_GOES_HERE");
+		$result = curl_exec($curl);
+		curl_close($curl);
+		
+		return $result;
+	}
+}
 
 ?>
 ```
